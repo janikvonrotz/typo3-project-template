@@ -1,0 +1,46 @@
+/*
+#--------------------------------------------------#
+#	Title:			[File-Title]
+#--------------------------------------------------#
+#	File-Type:		[File-Type]
+#	Description:	[Description]
+#	Project:		[Projectname]
+# 
+#	Author:			Janik von Rotz
+#	Author E-Mail:	contact@janikvonrotz.ch
+#
+#	Create Date:	dd.mm.yyyy hh.mm
+#	Last Edit Date:	dd.mm.yyyy hh.mm
+#	Version:		0.0.0
+#--------------------------------------------------#
+*/
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, th {
+    font-style: normal;
+    font-weight: normal;
+}
+ul, ol {
+    list-style: none outside none;
+}
+fieldset, img {
+    border: medium none;
+}
+caption, th {
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img, div, a, input {
+}
+a {
+    text-decoration: none;
+}
+a:active, a:focus {
+    outline: medium none;
+}
