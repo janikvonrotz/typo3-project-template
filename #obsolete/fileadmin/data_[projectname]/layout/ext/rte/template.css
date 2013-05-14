@@ -1,0 +1,37 @@
+/*
+#--------------------------------------------------#
+#    Title: [File-Title]
+#--------------------------------------------------#
+#    File-Type: [File-Type]
+#    Description: [Description]
+#    Project: [Projectname]
+# 
+#    Author: Janik von Rotz
+#    Author E-Mail: contact@janikvonrotz.ch
+#
+#    Create Date: dd.mm.yyyy hh.mm
+#    Last Edit Date: dd.mm.yyyy hh.mm
+#    Version: 0.0.0
+#--------------------------------------------------#
+*/
+
+.box_orange {  
+       background-color :#FEF3DE;  
+       border : 1px #F8B323 solid;  
+       padding : 5px;  
+       margin : 0;  
+}  
+.box_blue {  
+       background-color :#C1E3FF;  
+       border : 1px #005191 solid;  
+       padding : 5px;  
+       color: #005191;  
+} 
+
+/* Selectors for the default configuration of the link accessibity feature.*/
+a.external-link {}
+a.external-link-new-window {}
+a.internal-link {}
+a.internal-link-new-window {}
+a.download {}
+a.mail {}
