@@ -1,0 +1,53 @@
+/*
+#--------------------------------------------------#
+#    Title: Typo3 Backend Editor Default CSS
+#--------------------------------------------------#
+#    File name:  style.css
+#    Description: [Description]
+#    Tags: typo3, typoscript, rte
+#    Project: [Projectname]
+#
+#    Author: Janik von Rotz
+#    Author E-Mail: contact@janikvonrotz.ch
+#
+#    Create Date: 22.05.2012
+#    Last Edit Date: 22.05.2012
+#    Version: 1.0.0
+#
+#    License:
+#    This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Switzerland License.
+#    To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ch/ or
+#    send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+#--------------------------------------------------#
+*/
+
+/*
+#--------------------------------------------------#
+#    Custom CSS
+#--------------------------------------------------#
+*/
+
+.box_orange { 
+       background-color :#FEF3DE; 
+       border : 1px #F8B323 solid; 
+       padding : 5px; 
+       margin : 0; 
+} 
+.box_blue { 
+       background-color :#C1E3FF; 
+       border : 1px #005191 solid; 
+       padding : 5px; 
+       color: #005191; 
+}
+
+/*
+#--------------------------------------------------#
+#    Selectors for the default configuration of the link accessibity feature
+#--------------------------------------------------#
+*/
+a.external-link {}
+a.external-link-new-window {}
+a.internal-link {}
+a.internal-link-new-window {}
+a.download {}
+a.mail {}
