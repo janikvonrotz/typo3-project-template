@@ -10,7 +10,7 @@ This is a recommanded package manager, it's not required to run this project.
 
 	$ sudo apt-get install npm
 
-## [poppler-utils](https://packages.debian.org/sid/poppler-utils
+## [poppler-utils](https://packages.debian.org/sid/poppler-utils)
 
 contains the required binary `pdftotext`
 
@@ -49,52 +49,36 @@ Add contstants to `[pagename]`
 
 	# cat=website settings; type=string; label= the path to the project fileadmin root
 	fileadmin_root = fileadmin/[...]/data_[projectname]
-
 	# cat=website settings; type=string; label= foldername of the mainpage
 	mainpage_name = [pagename]
-
 	# cat=website settings; type=string; label= the URL to your homepage
 	base_url = http://.../
-
 	# cat=website settings; type=int+; label= root page id (point where the navigation starts)
 	rootpage_id = id_number
-
 	# cat=website settings; type=int+; label= sitemap page id (point where the sitemap starts)
 	sitemap_page_id = id_number
-
 	# cat=website settings; type=int+; label= search page id (point where the results should be displayed)
 	search_page_id = id_number
-
 	# cat=website settings; type=int+; label= set the entry level nummber
 	entryLevel = entryLevel_number
-
 	# cat=website language; type=int+; label= set id for English language
 	language_english_id = id_number
-
 	# cat=website language; type=int+; label= set id for French language
 	language_french_id = id_number
-
 	# cat=website language; type=int+; label= set id for Spanish language
 	language_spanish_id = id_number
-
 	# cat=website language; type=int+; label= set id for Dutch language
 	language_dutch_id = id_number
-
 	# cat=website language; type=int+; label= set id for Portugese language
 	language_portugese_id = id_number
-
 	# cat=website language; type=int+; label= set id for German language
 	language_german_id = id_number
-
 	# cat=website language; type=int+; label= set id for default language
 	language_default_id = id_number
-
 	# cat=rss settings; type=int+; label= rss page id (contains the content element)
 	rss_page_id = id_number
-
 	# cat=rss settings; type=int+; label= rss content id (content element contains rss pages)
 	rss_content_id = id_number
-
 	# cat=rss settings; type=string; label= rss copyright text
 	rss_copyright = string
 
