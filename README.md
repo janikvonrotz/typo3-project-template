@@ -1,4 +1,24 @@
-# [Install Typo3](https://github.com/TYPO3/TYPO3.CMS/blob/master/INSTALL.md)
+Finishing this guide you'll get:
+
+* A running Typo3 installation
+* A simple page with a configured backend layout, fronted layouts and permissions
+* Configured indexed search extension
+* Nice urls with RealUrl
+* Google sitemap for your site
+* Rss feed for your news and pages
+* A simple Backend Editor customization
+* Everything to set this installation in a maintenance mode
+
+Specification of latest running installation:
+
+* Date: 13.02.2013
+* OS: ?
+* Provider: Hoststar
+* Browser: Google Chrome - 31.0.1650.63  
+* Typo3: 6.1
+* PHP: ?
+
+# [Install Typo3](http://typo3.org/download/)
 
 # Install Packages
 
@@ -6,7 +26,7 @@ if possible install these tools
 
 ## [npm](https://www.npmjs.org/)
 
-This is a recommanded package manager, it's not required to run this project.
+This is a recommended package manager, it's not required to run this project.
 
 	$ sudo apt-get install npm
 
@@ -16,6 +36,8 @@ contains the required binary `pdftotext`
 
 	$ sudo apt-get install poppler-utils
 
+If not possible to install ask your provider for the path to the binary.
+	
 # Typo3 Install Tool Configuration
 
 When setting up the Typo3 installation update these configurations:
@@ -245,3 +267,5 @@ Page template to generate a google sitemap from your page tree and tt_news recor
 
 
 ![Google Sitemap Picture 2](https://raw.github.com/janikvonrotz/Typo3-Project-Template/master/docs/Google%20Sitemap%202.png)
+
+# Maintenance

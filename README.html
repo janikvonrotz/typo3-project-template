@@ -1,110 +1,107 @@
-<h1 id="install-tools">Install tools</h1>
-<p>npm<br>pdftotext &gt; poppler-utils</p>
-<h1 id="typo-install-tool-configuration">TYPO Install Tool Configuration</h1>
+<p>Finishing this guide you&#39;ll get:</p>
+<ul>
+<li>A running Typo3 installation</li>
+<li>A simple page with a configured backend layout, fronted layouts and permissions</li>
+<li>Configured indexed search extension</li>
+<li>Nice urls with RealUrl</li>
+<li>Google sitemap for your site</li>
+<li>Rss feed for your news and pages</li>
+<li>A simple Backend Editor customization</li>
+<li>Everything to set this installation in a maintenance mode</li>
+</ul>
+<p>Specification of latest running installation:</p>
+<ul>
+<li>Date: 13.02.2013</li>
+<li>OS: ?</li>
+<li>Provider: Hoststar</li>
+<li>Browser: Google Chrome - 31.0.1650.63  </li>
+<li>Typo3: 6.1</li>
+<li>PHP: ?</li>
+</ul>
+<h1 id="-install-typo3-http-typo3-org-download-"><a href="http://typo3.org/download/">Install Typo3</a></h1>
+<h1 id="install-packages">Install Packages</h1>
+<p>if possible install these tools</p>
+<h2 id="-npm-https-www-npmjs-org-"><a href="https://www.npmjs.org/">npm</a></h2>
+<p>This is a recommended package manager, it&#39;s not required to run this project.</p>
+<pre><code>$ sudo apt-get install npm
+</code></pre><h2 id="-poppler-utils-https-packages-debian-org-sid-poppler-utils-"><a href="https://packages.debian.org/sid/poppler-utils">poppler-utils</a></h2>
+<p>contains the required binary <code>pdftotext</code></p>
+<pre><code>$ sudo apt-get install poppler-utils
+</code></pre><p>If not possible to install ask your provider for the path to the binary.</p>
+<h1 id="typo3-install-tool-configuration">Typo3 Install Tool Configuration</h1>
+<p>When setting up the Typo3 installation update these configurations:</p>
 <ul>
 <li><code>TYPO3_CONF_VARS[&#39;GFX&#39;][&#39;TTFdpi&#39;] = &#39;96&#39;</code></li>
 <li><code>$TYPO3_CONF_VARS[&#39;SYS&#39;][&#39;sitename&#39;] = &#39;Your Typo3 Instance Name&#39;</code></li>
-<li><code>$TYPO3_CONF_VARS[&#39;SYS&#39;][&#39;setMemoryLimit&#39;] = &#39;128&#39;</code></li>
+<li><code>$TYPO3_CONF_VARS[&#39;SYS&#39;][&#39;setMemoryLimit&#39;] = &#39;64&#39;</code></li>
 </ul>
-<h1 id="fileadmin">fileadmin</h1>
-<p>rename <code>data_[projectname]</code></p>
+<h1 id="typo3-site-setup">Typo3 Site Setup</h1>
+<p>Copy the files inside the fileadmin folder to the fileadmin directory of you Typo3 installation.</p>
+<p>Update the name for your project <code>data_[projectname]</code></p>
 <ul>
-<li>[pagename] &gt; home<pre><code>  * [navigation]
-      * home
+<li>[pagename] &gt; navigation1]<pre><code>  * [navigation1] &gt; site1
+      * site1
           * subsite1
           * subsite2
           * subsite3
+      * site2
+          * subsite1
+          * subsite2
+          * subsite3            
 </code></pre></li>
 </ul>
-<h1 id="default-template">Default template</h1>
+<h1 id="configure-default-template">Configure Default Template</h1>
 <p>Create template on <code>[pagename]</code></p>
 <p>Add contstants to <code>[pagename]</code></p>
 <pre><code># cat=website settings; type=string; label= the path to the project fileadmin root
 fileadmin_root = fileadmin/[...]/data_[projectname]
-
 # cat=website settings; type=string; label= foldername of the mainpage
 mainpage_name = [pagename]
-
 # cat=website settings; type=string; label= the URL to your homepage
-base_url = [http://.../]
-
+base_url = http://.../
 # cat=website settings; type=int+; label= root page id (point where the navigation starts)
-rootpage_id = [id_number]
-
+rootpage_id = id_number
 # cat=website settings; type=int+; label= sitemap page id (point where the sitemap starts)
-sitemap_page_id = [id_number]
-
+sitemap_page_id = id_number
 # cat=website settings; type=int+; label= search page id (point where the results should be displayed)
-search_page_id = [id_number]
-
+search_page_id = id_number
 # cat=website settings; type=int+; label= set the entry level nummber
-entryLevel = [entryLevel_number]
-
+entryLevel = entryLevel_number
 # cat=website language; type=int+; label= set id for English language
-language_english_id = [id_number]
-
+language_english_id = id_number
 # cat=website language; type=int+; label= set id for French language
-language_french_id = [id_number]
-
+language_french_id = id_number
 # cat=website language; type=int+; label= set id for Spanish language
-language_spanish_id = [id_number]
-
+language_spanish_id = id_number
 # cat=website language; type=int+; label= set id for Dutch language
-language_dutch_id = [id_number]
-
+language_dutch_id = id_number
 # cat=website language; type=int+; label= set id for Portugese language
-language_portugese_id = [id_number]
-
+language_portugese_id = id_number
 # cat=website language; type=int+; label= set id for German language
-language_german_id = [id_number]
-
+language_german_id = id_number
 # cat=website language; type=int+; label= set id for default language
-language_default_id = [id_number]
-
+language_default_id = id_number
 # cat=rss settings; type=int+; label= rss page id (contains the content element)
-rss_page_id = [id_number]
-
+rss_page_id = id_number
 # cat=rss settings; type=int+; label= rss content id (content element contains rss pages)
-rss_content_id = [id_number]
-
+rss_content_id = id_number
 # cat=rss settings; type=string; label= rss copyright text
-rss_copyright = [string]
+rss_copyright = string
 </code></pre><p>Copy &amp; rename <code>data_schnuitz/pages/[pagename]</code></p>
 <p>Add setup to <code>[pagename]</code></p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/setup/config.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/setup/page.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/setup/content.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/setup/layout.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/lang/default.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/lang/setup_[language].ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/library/[libname].ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/ext/[extensionname]/setup.ts&quot;&gt;
-
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/setup/config.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/setup/page.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/setup/content.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/setup/layout.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/lang/default.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/lang/en.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/library/GoogleSitemap.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/library/RSS.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/library/Share.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/lang/setup_en.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/lang/setup_de.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/ext/indexed search/setup.ts&quot;&gt;
+<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/config.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/page.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/content.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/layout.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/lang/setup_[language].ts&quot;&gt;
 </code></pre><p>Copy &amp; rename <code>data_schnuitz/layout/[mainpage name]</code></p>
 <p>Update constant values</p>
 <p>Add language</p>
 <p>Add Page TSConfig in <code>[pagename]</code></p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/config/tsconfig.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/config/tcemain.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/config/tceform.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/config/be_editor_custom.ts&quot;&gt;
-
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/config/tsconfig.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/config/tcemain.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/config/tceform.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/pages/schnuitz/config/be_editor_custom.ts&quot;&gt;
+<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tsconfig.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tcemain.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tceform.ts&quot;&gt;
+&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/be_editor_custom.ts&quot;&gt;
 </code></pre><p>Add backend layout</p>
 <pre><code>backend_layout {
     colCount = 2
@@ -141,9 +138,6 @@ rss_copyright = [string]
 <p>Copy &amp; rename <code>fileadmin/data_schnuitz/groups/[groupname]</code> foreach group</p>
 <p>Add tsconfig for each group</p>
 <pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/groups/[groupname]/tsconfig.ts&quot;&gt;
-
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/groups/administrators/tsconfig.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_schnuitz/groups/editors/tsconfig.ts&quot;&gt;
 </code></pre><p>Set site permissions</p>
 <h1 id="real-url">Real Url</h1>
 <p>Install extension RealURL</p>
@@ -165,7 +159,9 @@ RewriteCond %{REQUEST_FILENAME} !-l
 <li>Max external files to index: <code>50</code></li>
 </ul>
 <p>Add search plugin on search site</p>
-<p>update constants</p>
+<p>Add setup for search box to the root</p>
+<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/ext/[extensionname]/setup.ts&quot;&gt;
+</code></pre><p>update constants</p>
 <h1 id="rss-feed">Rss Feed</h1>
 <p>Creates a xml site for rss feeds</p>
 <h2 id="constants">Constants</h2>
@@ -206,3 +202,4 @@ gmap_pid_tt_news_detail_view = [int+]
 </code></pre><h2 id="example">Example</h2>
 <p><img src="https://raw.github.com/janikvonrotz/Typo3-Project-Template/master/docs/Google%20Sitemap%201.png" alt="Google Sitemap Picture 1"></p>
 <p><img src="https://raw.github.com/janikvonrotz/Typo3-Project-Template/master/docs/Google%20Sitemap%202.png" alt="Google Sitemap Picture 2"></p>
+<h1 id="maintenance">Maintenance</h1>
