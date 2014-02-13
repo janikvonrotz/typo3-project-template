@@ -1,26 +1,47 @@
-# Install tools
+# [Install Typo3](https://github.com/TYPO3/TYPO3.CMS/blob/master/INSTALL.md)
 
-npm  
-pdftotext > poppler-utils
+# Install Packages
 
-# TYPO Install Tool Configuration
+if possible install these tools
+
+## [npm](https://www.npmjs.org/)
+
+This is a recommanded package manager, it's not required to run this project.
+
+	$ sudo apt-get install npm
+
+## [poppler-utils](https://packages.debian.org/sid/poppler-utils
+
+contains the required binary `pdftotext`
+
+	$ sudo apt-get install poppler-utils
+
+# Typo3 Install Tool Configuration
+
+When setting up the Typo3 installation update these configurations:
 
 * `TYPO3_CONF_VARS['GFX']['TTFdpi'] = '96'`
 * `$TYPO3_CONF_VARS['SYS']['sitename'] = 'Your Typo3 Instance Name'`
-* `$TYPO3_CONF_VARS['SYS']['setMemoryLimit'] = '128'`
+* `$TYPO3_CONF_VARS['SYS']['setMemoryLimit'] = '64'`
 
-# fileadmin
+# Typo3 Site Setup
 
-rename `data_[projectname]`
+Copy the files inside the fileadmin folder to the fileadmin directory of you Typo3 installation.
 
-* [pagename] > site1
-		* [navigation]
+Update the name for your project `data_[projectname]`
+
+* [pagename] > navigation1]
+		* [navigation1] > site1
 			* site1
 				* subsite1
 				* subsite2
 				* subsite3
+			* site2
+				* subsite1
+				* subsite2
+				* subsite3			
 
-# Default template
+# Configure Default Template
 
 Create template on `[pagename]`
 
