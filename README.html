@@ -23,11 +23,11 @@
 <p>if possible install these tools</p>
 <h2 id="-npm-https-www-npmjs-org-"><a href="https://www.npmjs.org/">npm</a></h2>
 <p>This is a recommended package manager, it&#39;s not required to run this project.</p>
-<pre><code>$ sudo apt-get install npm
-</code></pre><h2 id="-poppler-utils-https-packages-debian-org-sid-poppler-utils-"><a href="https://packages.debian.org/sid/poppler-utils">poppler-utils</a></h2>
+<pre><code>$ su<span class="operator"><span class="keyword">do</span> apt-<span class="keyword">get</span> install npm</code></pre>
+<h2 id="-poppler-utils-https-packages-debian-org-sid-poppler-utils-"><a href="https://packages.debian.org/sid/poppler-utils">poppler-utils</a></h2>
 <p>contains the required binary <code>pdftotext</code></p>
-<pre><code>$ sudo apt-get install poppler-utils
-</code></pre><p>If not possible to install ask your provider for the path to the binary.</p>
+<pre><code>$ su<span class="operator"><span class="keyword">do</span> apt-<span class="keyword">get</span> install poppler-utils</code></pre>
+<p>If not possible to install ask your provider for the path to the binary.</p>
 <h1 id="typo3-install-tool-configuration">Typo3 Install Tool Configuration</h1>
 <p>When setting up the Typo3 installation update these configurations:</p>
 <ul>
@@ -61,102 +61,102 @@
 <h1 id="configure-default-template">Configure Default Template</h1>
 <p>Create template on <code>[pagename]</code></p>
 <p>Add contstants to <code>[pagename]</code></p>
-<pre><code># cat=website settings; type=string; label= the path to the project fileadmin root
-fileadmin_root = fileadmin/[...]/data_[projectname]
-# cat=website settings; type=string; label= foldername of the mainpage
-mainpage_name = [pagename]
-# cat=website settings; type=string; label= the URL to your homepage
-base_url = http://.../
-# cat=website settings; type=int+; label= root page id (point where the navigation starts)
-rootpage_id = id_number
-# cat=website settings; type=int+; label= sitemap page id (point where the sitemap starts)
-sitemap_page_id = id_number
-# cat=website settings; type=int+; label= search page id (point where the results should be displayed)
-search_page_id = id_number
-# cat=website settings; type=int+; label= set the entry level nummber
-entryLevel = entryLevel_number
-# cat=website language; type=int+; label= set id for English language
-language_english_id = id_number
-# cat=website language; type=int+; label= set id for French language
-language_french_id = id_number
-# cat=website language; type=int+; label= set id for Spanish language
-language_spanish_id = id_number
-# cat=website language; type=int+; label= set id for Dutch language
-language_dutch_id = id_number
-# cat=website language; type=int+; label= set id for Portugese language
-language_portugese_id = id_number
-# cat=website language; type=int+; label= set id for German language
-language_german_id = id_number
-# cat=website language; type=int+; label= set id for default language
-language_default_id = id_number
-# cat=rss settings; type=int+; label= rss page id (contains the content element)
-rss_page_id = id_number
-# cat=rss settings; type=int+; label= rss content id (content element contains rss pages)
-rss_content_id = id_number
-# cat=rss settings; type=string; label= rss copyright text
-rss_copyright = string
-</code></pre><p>Copy &amp; rename <code>data_schnuitz/pages/[pagename]</code></p>
+<pre><code># cat=website settings; <span class="typedef"><span class="keyword">type</span>=string; label= the path to the project fileadmin root</span>
+<span class="title">fileadmin_root</span> = fileadmin/[...]/<span class="typedef">data_[projectname]</span>
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=string; label= foldername of the mainpage</span>
+<span class="title">mainpage_name</span> = [pagename]
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=string; label= the <span class="type">URL</span> to your homepage</span>
+<span class="title">base_url</span> = http://.../
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=int+; label= root page id <span class="container">(<span class="title">point</span> <span class="title">where</span> <span class="title">the</span> <span class="title">navigation</span> <span class="title">starts</span>)</span></span>
+<span class="title">rootpage_id</span> = id_number
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=int+; label= sitemap page id <span class="container">(<span class="title">point</span> <span class="title">where</span> <span class="title">the</span> <span class="title">sitemap</span> <span class="title">starts</span>)</span></span>
+<span class="title">sitemap_page_id</span> = id_number
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=int+; label= search page id <span class="container">(<span class="title">point</span> <span class="title">where</span> <span class="title">the</span> <span class="title">results</span> <span class="title">should</span> <span class="title">be</span> <span class="title">displayed</span>)</span></span>
+<span class="title">search_page_id</span> = id_number
+# cat=website settings; <span class="typedef"><span class="keyword">type</span>=int+; label= set the entry level nummber</span>
+<span class="title">entryLevel</span> = entryLevel_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">English</span> language</span>
+<span class="title">language_english_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">French</span> language</span>
+<span class="title">language_french_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">Spanish</span> language</span>
+<span class="title">language_spanish_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">Dutch</span> language</span>
+<span class="title">language_dutch_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">Portugese</span> language</span>
+<span class="title">language_portugese_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for <span class="type">German</span> language</span>
+<span class="title">language_german_id</span> = id_number
+# cat=website language; <span class="typedef"><span class="keyword">type</span>=int+; label= set id for default language</span>
+<span class="title">language_default_id</span> = id_number
+# cat=rss settings; <span class="typedef"><span class="keyword">type</span>=int+; label= rss page id <span class="container">(<span class="title">contains</span> <span class="title">the</span> <span class="title">content</span> <span class="title">element</span>)</span></span>
+<span class="title">rss_page_id</span> = id_number
+# cat=rss settings; <span class="typedef"><span class="keyword">type</span>=int+; label= rss content id <span class="container">(<span class="title">content</span> <span class="title">element</span> <span class="title">contains</span> <span class="title">rss</span> <span class="title">pages</span>)</span></span>
+<span class="title">rss_content_id</span> = id_number
+# cat=rss settings; <span class="typedef"><span class="keyword">type</span>=string; label= rss copyright text</span>
+<span class="title">rss_copyright</span> = string</code></pre>
+<p>Copy &amp; rename <code>data_schnuitz/pages/[pagename]</code></p>
 <p>Add setup to <code>[pagename]</code></p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/config.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/page.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/content.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/layout.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/lang/setup_[language].ts&quot;&gt;
-</code></pre><p>Copy &amp; rename <code>data_schnuitz/layout/[mainpage name]</code></p>
+<pre><code><span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/config.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/page.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/content.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/pages/[pagename]/layout.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/lang/setup_[language].ts"</span>&gt;</span></code></pre>
+<p>Copy &amp; rename <code>data_schnuitz/layout/[mainpage name]</code></p>
 <p>Update constant values</p>
 <p>Add language</p>
 <p>Add Page TSConfig in <code>[pagename]</code></p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tsconfig.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tcemain.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/tceform.ts&quot;&gt;
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/pages/[pagename]/be_editor_custom.ts&quot;&gt;
-</code></pre><p>Add backend layout</p>
+<pre><code><span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/data_[projectname]/pages/[pagename]/tsconfig.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/data_[projectname]/pages/[pagename]/tcemain.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/data_[projectname]/pages/[pagename]/tceform.ts"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/data_[projectname]/pages/[pagename]/be_editor_custom.ts"</span>&gt;</span></code></pre>
+<p>Add backend layout</p>
 <pre><code>backend_layout {
-    colCount = 2
-    rowCount = 2
+    colCount = <span class="number">2</span>
+    rowCount = <span class="number">2</span>
     rows {
-        1 {
+        <span class="number">1</span> {
             columns {
-                1 {
-                    name = TEASER
-                    colspan = 2
-                    colPos = 2
+                <span class="number">1</span> {
+                    <span class="property">name</span> = TEASER
+                    colspan = <span class="number">2</span>
+                    colPos = <span class="number">2</span>
                 }
             }
         }
-        2 {
+        <span class="number">2</span> {
             columns {
-                1 {
-                    name = CONTENT
-                    colPos = 0
+                <span class="number">1</span> {
+                    <span class="property">name</span> = CONTENT
+                    colPos = <span class="number">0</span>
                 }
-                2 {
-                    name = SIDEBAR
-                    colPos = 3
+                <span class="number">2</span> {
+                    <span class="property">name</span> = SIDEBAR
+                    colPos = <span class="number">3</span>
                 }
             }
         }
     }
-}
-</code></pre><p>Add css styled content</p>
+}</code></pre>
+<p>Add css styled content</p>
 <h1 id="permissions">Permissions</h1>
 <p>Add group administrators with member admin</p>
 <p>Add user editor</p>
 <p>Add group editors with member editor</p>
 <p>Copy &amp; rename <code>fileadmin/data_schnuitz/groups/[groupname]</code> foreach group</p>
 <p>Add tsconfig for each group</p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/data_[projectname]/groups/[groupname]/tsconfig.ts&quot;&gt;
-</code></pre><p>Set site permissions</p>
+<pre><code><span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/data_[projectname]/groups/[groupname]/tsconfig.ts"</span>&gt;</span></code></pre>
+<p>Set site permissions</p>
 <h1 id="real-url">Real Url</h1>
 <p>Install extension RealURL</p>
 <p>Update htaccess</p>
-<pre><code>RewriteEngine On
-RewriteRule ^/typo3$ - [L]
-RewriteRule ^/typo3/.*$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-</code></pre><p>Remove sites from speaking URL</p>
+<pre><code><span class="keyword">RewriteEngine</span> <span class="literal">On</span>
+<span class="keyword">RewriteRule</span> ^/typo3$ -<span class="sqbracket"> [L]</span>
+<span class="keyword">RewriteRule</span> ^/typo3/.*$ -<span class="sqbracket"> [L]</span>
+<span class="keyword">RewriteCond</span> <span class="cbracket">%{REQUEST_FILENAME}</span> !-f
+<span class="keyword">RewriteCond</span> <span class="cbracket">%{REQUEST_FILENAME}</span> !-d
+<span class="keyword">RewriteCond</span> <span class="cbracket">%{REQUEST_FILENAME}</span> !-l</code></pre>
+<p>Remove sites from speaking URL</p>
 <h1 id="backend-editor">Backend Editor</h1>
 <h1 id="indexed-search">Indexed Search</h1>
 <p>Install extension IndexedSeach</p>
@@ -168,46 +168,46 @@ RewriteCond %{REQUEST_FILENAME} !-l
 </ul>
 <p>Add search plugin on search site</p>
 <p>Add setup for search box to the root</p>
-<pre><code>&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/ext/[extensionname]/setup.ts&quot;&gt;
-</code></pre><p>update constants</p>
+<pre><code><span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/ext/[extensionname]/setup.ts"</span>&gt;</span></code></pre>
+<p>update constants</p>
 <h1 id="rss-feed">Rss Feed</h1>
 <p>Creates a xml site for rss feeds</p>
 <h2 id="constants">Constants</h2>
-<pre><code># cat=rss settings; type=int+; label= rss page id (contains the content element)
-rss_page_id = [id_number]
+<pre><code># cat=rss settings; <span class="typedef"><span class="keyword">type</span>=int+; label= rss page id <span class="container">(<span class="title">contains</span> <span class="title">the</span> <span class="title">content</span> <span class="title">element</span>)</span></span>
+<span class="title">rss_page_id</span> = [id_number]
 
-# cat=rss settings; type=int+; label= rss content id (content element contains rss pages)
-rss_content_id = [id_number]
+# cat=rss settings; <span class="typedef"><span class="keyword">type</span>=int+; label= rss content id <span class="container">(<span class="title">content</span> <span class="title">element</span> <span class="title">contains</span> <span class="title">rss</span> <span class="title">pages</span>)</span></span>
+<span class="title">rss_content_id</span> = [id_number]
 
-# cat=rss settings; type=string; label= rss copyright text
-rss_copyright = [string]
-</code></pre><h2 id="setup">Setup</h2>
-<pre><code># typoscript rss library
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/lib/rss.ts&quot;&gt;
+# cat=rss settings; <span class="typedef"><span class="keyword">type</span>=string; label= rss copyright text</span>
+<span class="title">rss_copyright</span> = [string]</code></pre>
+<h2 id="setup">Setup</h2>
+<pre><code><span class="xml"></span><span class="comment"># typoscript rss library</span><span class="xml">
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/lib/rss.ts"</span>&gt;</span>
 
-# rss page setup
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/tssetup/page.ts&quot;&gt;
+</span><span class="comment"># rss page setup</span><span class="xml">
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/tssetup/page.ts"</span>&gt;</span>
 
-# rss page configurations
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/tssetup/config.ts&quot;&gt;
-</code></pre><h1 id="google-sitemap">Google Sitemap</h1>
+</span><span class="comment"># rss page configurations</span><span class="xml">
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/config/page/[pagename]/tssetup/config.ts"</span>&gt;</span></span></code></pre>
+<h1 id="google-sitemap">Google Sitemap</h1>
 <p>Page template to generate a google sitemap from your page tree and tt_news records (optional).</p>
 <h2 id="constants">Constants</h2>
-<pre><code># cat=google sitemap settings; type=boolean; label= include not in menu websites (1=yes/0=no)
-gmap_include_not_in_menu = 0
+<pre><code># cat=google sitemap settings; <span class="typedef"><span class="keyword">type</span>=boolean; label= include not in menu websites <span class="container">(1=<span class="title">yes</span>/0=<span class="title">no</span>)</span></span>
+<span class="title">gmap_include_not_in_menu</span> = <span class="number">0</span>
 
-# cat=google sitemap settings; type=string; label= exclude pages by uid (comma seperated)[24,28,34]
-gmap_exclude_uid_list = [string]
+# cat=google sitemap settings; <span class="typedef"><span class="keyword">type</span>=string; label= exclude pages by uid <span class="container">(<span class="title">comma</span> <span class="title">seperated</span>)</span>[24,28,34]</span>
+<span class="title">gmap_exclude_uid_list</span> = [string]
 
-# cat=google sitemap settings; type=int+; label= page id that contains the tt_news records
-gmap_pid_tt_news_records = [int+]
+# cat=google sitemap settings; <span class="typedef"><span class="keyword">type</span>=int+; label= page id that contains the tt_news records</span>
+<span class="title">gmap_pid_tt_news_records</span> = [int+]
 
-# cat=google sitemap settings; type=int+; label= page id that contains the tt_news detail view
-gmap_pid_tt_news_detail_view = [int+]
-</code></pre><h2 id="setup">Setup</h2>
-<pre><code># Root Page Layout Setup
-&lt;INCLUDE_TYPOSCRIPT: source=&quot;FILE:fileadmin/[...]/data_[projectname]/library/[GoogleSitemap.ts&quot;&gt;
-</code></pre><h2 id="example">Example</h2>
+# cat=google sitemap settings; <span class="typedef"><span class="keyword">type</span>=int+; label= page id that contains the tt_news detail view</span>
+<span class="title">gmap_pid_tt_news_detail_view</span> = [int+]</code></pre>
+<h2 id="setup">Setup</h2>
+<pre><code><span class="xml"></span><span class="comment"># Root Page Layout Setup</span><span class="xml">
+<span class="tag">&lt;<span class="title">INCLUDE_TYPOSCRIPT:</span> <span class="attribute">source</span>=<span class="value">"FILE:fileadmin/[...]/data_[projectname]/library/[GoogleSitemap.ts"</span>&gt;</span></span></code></pre>
+<h2 id="example">Example</h2>
 <p><img src="https://raw.github.com/janikvonrotz/Typo3-Project-Template/master/docs/Google%20Sitemap%201.png" alt="Google Sitemap Picture 1"></p>
 <p><img src="https://raw.github.com/janikvonrotz/Typo3-Project-Template/master/docs/Google%20Sitemap%202.png" alt="Google Sitemap Picture 2"></p>
 <h1 id="maintenance">Maintenance</h1>
