@@ -53,15 +53,15 @@ Copy the files inside the fileadmin folder to the fileadmin directory of you Typ
 Update the name for your project `data_[projectname]`
 
 * [pagename] > navigation1]
-		* [navigation1] > site1
-			* site1
-				* subsite1
-				* subsite2
-				* subsite3
-			* site2
-				* subsite1
-				* subsite2
-				* subsite3			
+  * [navigation1] > site1
+    * site1
+      * subsite1
+      * subsite2
+      * subsite3
+    * site2
+      * subsite1
+      * subsite2
+      * subsite3			
 
 # Configure Default Template
 
